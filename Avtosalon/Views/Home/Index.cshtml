@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Автосалон</title>
+</head>
+<body>
+    <div>
+        <h3>Авто</h3>
+        <table>
+            <tr>
+                <td><p>Номер Авто</p></td>
+                <td><p>Назва</p></td>
+                <td><p>Кількість</p></td>
+                <td><p>Власник</p></td>
+                <td><p>Ціна</p></td>
+                <td></td>
+            </tr>
+            @foreach (var t in ViewBag.Cars)
+            {
+                <tr>
+                    <td><p>@t.Id</p></td>
+                    <td><p>@t.Name</p></td>
+                    <td><p>@t.Count</p></td>
+                    <td><p>@t.Price</p></td>
+                    <td><p><a href="/Car/Car/@t.Id">Переглянути товар</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+﻿@model Sklad.Models.Avto
+@{ ViewBag.Title = "Додавання товару";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Додавання авто</title>
+</head>
+<body>
+    <div id="content">
+        <Form method="post" action="">
+            <Table>
+                <Tr>
+                    <td> <p> Введіть назву авто: </p> </td>
+                    <Td> @Html.EditorFor(model => model.Name) </Td>
+                </Tr>
+                <Tr>
+                    <td> <p> Введіть кількість: </p> </td>
+                    <td>
+                        @Html.EditorFor(model => model.Count)
+                    </td>
+                </Tr>
+
+                <Tr>
+                    <td> <p> Введіть ціну: </p> </td>
+                    <td>
+                        @Html.EditorFor(model => model.Price)
+                    </td>
+                </Tr>
+                <Tr>
+                    <td> <input type="submit" value="Додати" onclick="add()" /> </td>
+                </Tr>
+            </Table>
+        </Form>
+    </div>
+</body>
+</html>
